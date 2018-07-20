@@ -17,7 +17,7 @@ cp ~/Desktop/y2s18-routing/lab/!(README.md) lab/
 subl lab &
 ```
 2. As before, you can start your server with `python app.py` and then go
-to [http:127.0.0.1:5000] on Chrome and make sure everything works like
+to http:127.0.0.1:5000 on Chrome and make sure everything works like
 it did before. If you have troubles, let a TA know.
 
 ### Part 1: Adding an article
