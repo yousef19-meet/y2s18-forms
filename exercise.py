@@ -4,10 +4,11 @@ app = Flask(__name__)
 @app.route('/', methods=['GET', 'POST'])
 def homepage():
     if request.method == 'GET':
-        return render_template('form.html')
+        return render_template('sum_form.html')
     else:
-        return render_template('response.html',
-               n=request.form['firstname'],
-               s=request.form['sex'])
+        num1 = ???
+        num2 = ???
+        return render_template('sum_response.html',
+               n1=num1, n2=num2, sum=num1+num2)
 
 app.run(debug=True)
