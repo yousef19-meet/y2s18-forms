@@ -1,45 +1,51 @@
-## Y2 2018 Summer: Forms Lab
+# Y2 2018 Summer: Forms Lab
 
 Welcome to the forms lab! Please read all the instructions so you don't
 get lost halfway through, but definitely feel free to ask for help if you
 get stuck. Good luck, and have fun!
 
+## Lecture Exercises
+
 ### Part 0: Setup
 
-1. For this lab, we're working off of the routing lab from last time, so
-we can just clone this repository and copy over the code from the last lab.
-You can copy this all into your command line and press enter:
+Before you start coding, make sure you clone the repository for this lab:
 ```
 cd ~/Desktop
-git clone https://github.com/meet-projects/y2s18-forms.git
-cd y2s18-forms
-cp ~/Desktop/y2s18-routing/lab/!(README.md) lab/
+git clone https://github.com/meet-projects/y2s18-routing.git
+cd y2s18-routing
 subl lab &
 ```
-2. As before, you can start your server with `python app.py` and then go
-to `http://127.0.0.1:5000` on Chrome and make sure everything works like
-it did before. If you have troubles, let a TA know.
 
-### Part 1: Adding an article
+### Part 1: Routing Review
 
-1. In `templates`, we've added a new file called `add.html` with some simple
-form elements. Edit and add to the template so the form takes all the
-information necessary to make a new article. *Hint*: Check `knowledge_model.py`
-for ideas on the information that you need to get.
+In `app.py`, add a route to `/add` to return the `add.html` template.
 
-2. In `app.py`, add a route to `/add` so that a GET request gives the
-`add.html` template. You can test that your route works in Chrome.
+### Part 2: HTTP Methods
 
-3. Edit your method for the route to `/add` so that it takes both GET and POST
-requests. If a GET request comes in, have your function return the `add.html`
-template as it did before, but if a POST request comes in, `return "hello"`
-for now. Test submitting your form in the browser to make sure this works.
+Edit your method for the route to `/add` so that it takes both GET and
+POST requests.
 
-4. Now we need to add to the POST method of the `/add` route we just created
-in `app.py`. If the request is a POST request, add the information from the
-article to the database. *Hint*: This requires interacting with `request.form`
-and the database functions you wrote for the databases lab. You can review
-the slides to see how they work!
+If a GET request comes in, return the `add.html` template like before,
+but if a POST request comes in, print `'Received POST request!'`
+(remember `print` statements?) and then return the same template.
+
+### Part 3: Creating a Form
+
+In the `add.html` template, between the `<form>` tags, add two `<input>`
+tags, one with `name=student_name` and one with `name=student_year`.
+Add one more `<input>` tag, this time with `type=submit` and `value=Submit`.
+
+### Part 4: POSTing Forms
+
+Now we need to add to the POST method of the `/add` route we have created
+in `app.py`. If the request is a POST request, add the information from
+the article to the database.
+
+*Hint*: The `name` of the form element corresponds to the value of that
+element in `request.form`.
+
+## Independent Lab
+
 
 ### Part 2: Deleting an article
 
