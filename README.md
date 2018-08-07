@@ -7,7 +7,8 @@ feel free to ask for help if you get stuck. Good luck, and have fun!
 
 ## Setup
 
-Before you start coding, make sure you clone the repository for this lab:
+Before you start coding, make sure you fork and clone the repository
+for this lab:
 ```
 cd ~/Desktop
 git clone https://github.com/YOUR_GITHUB_USERNAME/y2s18-forms.git
@@ -20,9 +21,10 @@ git clone https://github.com/YOUR_GITHUB_USERNAME/y2s18-forms.git
 ### Part 1: HTTP Methods
 
 In `app.py`, add a route to `/add` to return the `add.html` template.
+Name the method `add_student_route()`.
 
-Edit your method for the route to `/add` so that it takes both GET and
-POST requests.
+Edit your `add_student_route()` method for the route to `/add` so that
+it takes both GET and POST requests.
 
 If a GET request comes in, return the `add.html` template like before,
 but if a POST request comes in, print `'Received POST request!'`
@@ -38,10 +40,14 @@ Add one more `<input>` tag, this time with `type=submit` and `value=Submit`.
 
 Now we need to add to the POST method of the `/add` route we have created
 in `app.py`. If the request is a POST request, add the information from
-the student to the database.
+the student to the database. You only need to change the `print` statement,
+since you can still return the same template as before.
 
 *Hint*: The `name` of the form element corresponds to the value of that
 element in `request.form`.
+
+*Hint*: You might want to take a look at the `add_student()` method in
+`databases.py`.
 
 ## Independent Lab: Deleting an entry
 
