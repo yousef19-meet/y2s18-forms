@@ -8,6 +8,6 @@ def homepage():
     else:
         return render_template('response.html',
                n=request.form['firstname'],
-               s=request.form['sex'])
+               s=request.form['animal'])
 
 app.run(debug=True)

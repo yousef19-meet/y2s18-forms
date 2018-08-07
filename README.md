@@ -10,19 +10,16 @@ feel free to ask for help if you get stuck. Good luck, and have fun!
 Before you start coding, make sure you clone the repository for this lab:
 ```
 cd ~/Desktop
-git clone https://github.com/meet-projects/y2s18-forms.git
-subl y2s18-forms
+git clone https://github.com/YOUR_GITHUB_USERNAME/y2s18-forms.git
 ```
 
 ## Lecture Exercises
 
 **Important**: Work in the `exercises` folder!
 
-### Part 1: Routing Review
+### Part 1: HTTP Methods
 
 In `app.py`, add a route to `/add` to return the `add.html` template.
-
-### Part 2: HTTP Methods
 
 Edit your method for the route to `/add` so that it takes both GET and
 POST requests.
@@ -31,17 +28,17 @@ If a GET request comes in, return the `add.html` template like before,
 but if a POST request comes in, print `'Received POST request!'`
 (remember `print` statements?) and then return the same template.
 
-### Part 3: Creating a Form
+### Part 2: Creating a Form
 
 In the `add.html` template, between the `<form>` tags, add two `<input>`
 tags, one with `name=student_name` and one with `name=student_year`.
 Add one more `<input>` tag, this time with `type=submit` and `value=Submit`.
 
-### Part 4: POSTing Forms
+### Part 3: POSTing Forms
 
 Now we need to add to the POST method of the `/add` route we have created
 in `app.py`. If the request is a POST request, add the information from
-the article to the database.
+the student to the database.
 
 *Hint*: The `name` of the form element corresponds to the value of that
 element in `request.form`.
@@ -52,8 +49,8 @@ element in `request.form`.
 
 ### Part 1
 
-In `student.html`, add a `<form>` tag somewhere that has one `<input>`
-element with `type="submit"` and `value="delete"`. Edit the form element
+In `student.html`, add a `<form>` tag that has one `<input>` element
+with `type="submit"` and `value="delete"`. Edit the form element
 so that when submitted, it makes a POST to `/delete/<student_id>`, where
 the `student_id` is of the article currently being viewed. *Hint*: You
 will need to change the `action` and `method` attributes of `<form>`.
