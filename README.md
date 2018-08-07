@@ -1,7 +1,7 @@
-# Y2 2018 Summer: Forms Lab
+# Y2 2018 Summer: Forms in Flask
 
-Welcome to the forms lab! (Note that this comes after the
-[routing lab](meet-projects/y2s18-routing).) Please read all the
+Welcome to forms in Flask! (Note that this comes after
+[routing with Flask](meet-projects/y2s18-routing).) Please read all the
 instructions so you don't get lost halfway through, but definitely
 feel free to ask for help if you get stuck. Good luck, and have fun!
 
@@ -28,7 +28,7 @@ it takes both GET and POST requests.
 
 If a GET request comes in, return the `add.html` template like before,
 but if a POST request comes in, print `'Received POST request!'`
-(remember `print` statements?) and then return the same template.
+and then return the same template.
 
 ### Part 2: Creating a Form
 
@@ -43,11 +43,10 @@ in `app.py`. If the request is a POST request, add the information from
 the student to the database. You only need to change the `print` statement,
 since you can still return the same template as before.
 
+*Hint*: Look at the `add_student()` method in `databases.py`.
+
 *Hint*: The `name` of the form element corresponds to the value of that
 element in `request.form`.
-
-*Hint*: You might want to take a look at the `add_student()` method in
-`databases.py`.
 
 ## Independent Lab: Deleting an entry
 
@@ -59,7 +58,7 @@ In `student.html`, add a `<form>` tag that has one `<input>` element
 with `type="submit"` and `value="delete"`. Edit the form element
 so that when submitted, it makes a POST to `/delete/<student_id>`, where
 the `student_id` is of the article currently being viewed. *Hint*: You
-will need to change the `action` and `method` attributes of `<form>`.
+will need to change the `method` attribute of `<form>`.
 
 ### Part 2
 
@@ -109,8 +108,8 @@ and update whether individual students have completed their labs.
 
 ## Additional bonuses
 
+1. Add any links between pages that you think are missing.
+
 1. Add a way to search for student by name, using GET query string parameters.
 
 2. Figure out a way to add a photo to each student's page.
-
-3. Incorporate some CSS animations.
