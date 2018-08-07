@@ -1,9 +1,10 @@
 # Y2 2018 Summer: Forms in Flask
 
 Welcome to forms in Flask! (Note that this comes after
-[routing with Flask](meet-projects/y2s18-routing).) Please read all the
-instructions so you don't get lost halfway through, but definitely
-feel free to ask for help if you get stuck. Good luck, and have fun!
+[routing with Flask](https://github.com/meet-projects/y2s18-routing).)
+Please read all the instructions so you don't get lost halfway
+through, but definitely feel free to ask for help if you get stuck.
+Good luck, and have fun!
 
 ## Setup
 
