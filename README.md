@@ -31,6 +31,11 @@ If a GET request comes in, return the `add.html` template like before,
 but if a POST request comes in, print `'Received POST request!'`
 and then return the same template.
 
+**Bonus**: Your browser automatically makes GET requests, so it's hard to
+test whether your response to POST requests is working correctly. Set up Postman,
+a Chrome App, to make a POST request to your server,
+and make sure that you can see `'Received POST request!'`.
+
 ### Part 2: Creating a Form
 
 In the `add.html` template, between the `<form>` tags, add two `<input>`
